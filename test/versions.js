@@ -4,15 +4,16 @@ var should = require('should');
 var manager = require('../lib');
 
 describe('Versions', function() {
-    this.timeout(50000);
+    this.timeout(5000000);
 
     describe('.available()', function() {
         var result;
 
-        before(function() {
+        before(function(done) {
             return manager.available()
             .then(function(versions) {
                 result = versions;
+                done();
             });
         });
 
@@ -30,10 +31,11 @@ describe('Versions', function() {
     describe('.install()', function() {
         var result;
 
-        before(function() {
+        before(function(done) {
             return manager.install('2.0.0')
             .then(function(version) {
                 result = version;
+                done();
             });
         });
 
