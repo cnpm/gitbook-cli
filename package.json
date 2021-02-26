@@ -6,7 +6,7 @@
     "main": "bin/gitbook.js",
     "dependencies": {
         "q": "1.4.1",
-        "lodash": "4.5.1",
+        "lodash": "4.17.21",
         "semver": "5.1.0",
         "npmi": "1.0.1",
         "tmp": "0.0.28",
